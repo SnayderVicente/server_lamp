@@ -1,0 +1,12 @@
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install apache2 -y
+sudo systemctl status apache2
+sudo apachectl -v
+sudo apt install mysql-server -y
+sudo apt install php libapache2-mod-php php-mysql -y
+sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
+sudo phpenmod mbstring
+sudo systemctl restart apache2
+“mysql -u root -p”
+sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+sudo a2enconf phpmyadmin
